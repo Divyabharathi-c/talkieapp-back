@@ -13,7 +13,7 @@ dotenv.config();
 const sendVerificationEmail = async (user) => {
     // Create reusable transporter object using SMTP transport
     const transporter = nodemailer.createTransport({
-        service: 'outlook',
+        service: 'gmail',
         auth: {
           user: process.env.EMAIL,
           pass: process.env.PASS,
@@ -167,7 +167,7 @@ export const Login = async (req, res) => {
 const sendResetPasswordEmail = async (user) => {
     // Create reusable transporter object using SMTP transport
     const transporter = nodemailer.createTransport({
-        service: 'outlook',
+        service: 'gmail',
         auth: {
           user: process.env.EMAIL,
           pass: process.env.PASS,
